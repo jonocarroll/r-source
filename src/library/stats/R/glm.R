@@ -109,6 +109,7 @@ glm <- function(formula, family = gaussian, data, weights,
             eval(call(if(is.function(method)) "method" else method,
                       x = X[, "(Intercept)", drop=FALSE], y = Y,
                       weights = weights, offset = offset, family = family,
+                      start = start, etastart = etastart, mustart = mustart,
                       control = control, intercept = TRUE))
         ## That fit might not have converged ....
         if(!fit2$converged)
